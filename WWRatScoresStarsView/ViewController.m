@@ -24,13 +24,12 @@
     
     _dataSourceArr = @[@"正常显示评分(3.6)",@"选择整数评分(1-5分)",@"选择小数评分(有0分)",@"显示大星星评分"];
     
-    UITableView *tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 50 * _dataSourceArr.count) style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.sectionFooterHeight = 0.01f;
     tableView.sectionHeaderHeight = 0.01f;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    tableView.rowHeight = 44;
+    tableView.rowHeight = 50;
     [self.view addSubview:tableView];
     
 }
